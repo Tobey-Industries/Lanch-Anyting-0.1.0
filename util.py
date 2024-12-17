@@ -83,7 +83,7 @@ mscopyright = "Copyright(c) Microsoft Corporation 2006-2023"
 ntfourlogonsoundcopyright = "Copyright(c) Microsoft Corporation"
 
 batteryf = psutil.sensors_battery()
-battery = batteryf.percent
+battery = batteryf.percent if batteryf else 0
 hostName = socket.gethostname()
 hostIP = socket.gethostbyname(hostName)
 
